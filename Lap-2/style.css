@@ -1,0 +1,14 @@
+*{
+  margin:0px;
+  padding: 0px;  
+  font-family: serif;
+}
+.main{
+    background: url('Slider-Darker-1920x1368.jpg');
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient;
+    background-repeat: no-repeat;
+    /* background-position: center;
+     */
+}
