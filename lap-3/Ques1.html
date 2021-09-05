@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var isPalindrome = function(string){
+    if(string == string.split('').reverse().join('')){
+        document.write(string +" " + 'is palindrome.');
+    }
+    else{
+        document.write(string +" " + 'is not palindrome.');
+    }
+}
+
+document.write(isPalindrome ("mala"));
+
+</script>
+</body>
+</html>
