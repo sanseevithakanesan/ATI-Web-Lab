@@ -7,6 +7,7 @@
     <title>Document</title>
      <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <form action=" " method="POST" >
 <h1 text-align="center" style  ="color:white;"><u>create user</u></h1><br><br>
@@ -42,7 +43,6 @@ if(isset($_POST['button'])){
  $Age = $_POST['age'];
  $Address = $_POST['address'];
  
-
 if (EmptyCheck($Firstname, $Lastname , $Email, $Age ,$Address )!== false){
          echo "<p style = color:red;>Fill in all fields!</p>";
 }
@@ -51,7 +51,6 @@ elseif(insertUserData($Firstname, $Lastname , $Email, $Age ,$Address )){
 }
 
 }
-
 
 ?>
 </form>

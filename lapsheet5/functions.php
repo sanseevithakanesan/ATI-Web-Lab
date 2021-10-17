@@ -13,7 +13,6 @@ function EmptyCheck($fname,$lname,$email,$age,$address){
 
 }
     
-
 function createMysqlConnection(){
     $servername = "localhost";
     $username = "root";
@@ -32,27 +31,6 @@ function createMysqlConnection(){
    
 }
 
-
-//function  createtable(){
-//     $conn = createMysqlConnection();
-//     $sql = "CREATE TABLE user(id INT(6)UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-//     firstname VARCHAR(20) NOT NULL,
-//     lastname  VARCHAR(20) NOT NULL,
-//     email VARCHAR(30) NOT NULL,
-//     age VARCHAR(30) NOT NULL,
-//     useraddress VARCHAR(20)NOT NULL 
-//         )";
-
-//         if($conn->query($sql)==TRUE){
-//             echo "users table created successfully";
-//         }else{
-//             echo "Erorr:".$conn->error;
-//         }
-// }
-
-
-    
-
 function  insertUserData($fname,$lname,$email,$age,$useraddress){
     $conn = createMysqlConnection();
     $sql ="INSERT INTO user1 (firstname,lastname,email,age,useraddress)
@@ -69,13 +47,10 @@ function  insertUserData($fname,$lname,$email,$age,$useraddress){
    
 }
 
-
-
-
 function Viewdata(){
     $sql = "SELECT * FROM user1";
     $results  = createMysqlConnection()->query($sql);
-    echo "<table  border=1px style =color:white>
+    echo "<table  border=1px style =color:gray>
     <tr>
     
     <th>user id </th>
@@ -101,16 +76,5 @@ function Viewdata(){
     }
     echo "</table>";
 }
-
-
-
-
-
-
-
-
-
- 
-
 
 ?>
