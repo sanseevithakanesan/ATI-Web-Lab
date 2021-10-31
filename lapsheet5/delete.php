@@ -25,7 +25,7 @@
 include_once 'functions.php';
 if(isset($_POST['btndelete'])){
     $Id = $_POST['Id'];
-    $sql = "DELETE FROM user1 WHERE id = $Id ";
+    $sql = "DELETE FROM user1,countries,subjects WHERE id = $Id ";
   
     if( createMysqlConnection()->query($sql)){
       echo "delete  successfully!";

@@ -13,7 +13,6 @@ body {
   background:url('xyz.jpg');
   position:center;
   background-size:cover;
-
 }
 
 .flip-card {
@@ -63,11 +62,12 @@ body {
 <h1 style="color:gray">User Details</h1>
 <h3 style="color:gray">Update Delete Records below:</h3>
 <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="123.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="123.png" alt="Avatar" style="width:300px;height:300px;">
+</div>
+
+<div class="flip-card-back">
       <h1>View Details</h1> 
 
       <button type="submit" name = "btnview"  class="create" style="background-color:green;color:white;">view</button>
@@ -77,9 +77,8 @@ body {
       <button type="submit" name = "delete"  class ="create" style="background-color:red;"><a href="http://localhost/lab-5/delete.php" style="color:white;">Delete</a></button><br><br> 
       
       <a  href="http://localhost/lab-5/index.php" style="color:black">Go to Home Page</a>
-
-    </div>
-  </div>
+</div>
+</div>
 </div><br><br>
 
 <?php

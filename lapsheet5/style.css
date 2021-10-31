@@ -10,22 +10,23 @@
         
       }
 
-    body{
+   body{
           padding:30px 350px 10px 350px  ;
           background-repeat: no-repeat;
           width:100%;
           background-size: cover;
           margin-top: 20px;
         }
-    label{
+
+  label{
           color:white;
        }
 
-   input{
+  input {
           margin: 8px 0;
         }
 
-   .create {
+  .create {
 
           position:center;
           background-color: red;
@@ -36,7 +37,7 @@
 
          }
 
-   .imgcontainer{
+ .imgcontainer{
           width: 200px;
           height:150px;
-      }
+           }

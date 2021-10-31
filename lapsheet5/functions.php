@@ -31,10 +31,10 @@ function createMysqlConnection(){
    
 }
 
-function  insertUserData($fname,$lname,$email,$age,$useraddress){
+function  insertUserData($fname,$lname,$email,$age,$useraddress,$gender){
     $conn = createMysqlConnection();
-    $sql ="INSERT INTO user1 (firstname,lastname,email,age,useraddress)
-    VALUES('$fname','$lname','$email','$age','$useraddress')";
+    $sql ="INSERT INTO user1(firstname,lastname,email,age,useraddress,gender)
+    VALUES('$fname','$lname','$email','$age','$useraddress','$gender')";
 
 
     if($conn -> query($sql)==TRUE){
@@ -47,10 +47,39 @@ function  insertUserData($fname,$lname,$email,$age,$useraddress){
    
 }
 
+function  insertsubjectData($subname){
+    $conn = createMysqlConnection();
+    $sql ="INSERT INTO subjects (subjectname)
+    VALUES('$subname')";
+
+
+    if($conn -> query($sql)==TRUE){
+        echo "subjectData succesfully inserted</br>";
+     
+    }else{
+        echo "Error:".$conn -> error;
+    }
+    $conn->close();
+   
+}
+
+function insertcountriesData($countryname){
+    $conn = createMysqlConnection();
+    $sql ="INSERT INTO countries (countryname)
+    VALUES('$countryname')";
+
+    if($conn->query($sql)==TRUE){
+        echo "countryData succesfully inserted</br>";
+    }
+    else{
+        echo "Error:".$conn->error;
+    }
+}
+
 function Viewdata(){
-    $sql = "SELECT * FROM user1";
+    $sql = "SELECT * FROM user1,countries,subjects";
     $results  = createMysqlConnection()->query($sql);
-    echo "<table  border=1px style =color:gray>
+    echo "<table  border=1px style =color:white>
     <tr>
     
     <th>user id </th>
@@ -59,6 +88,9 @@ function Viewdata(){
     <th> Email </th>
     <th> Age </th>
     <th> Address </th>
+    <th> Countries </th>
+    <th> Subjects </th>
+    <th> Gender</th>
     </tr>
     
     ";
@@ -71,6 +103,9 @@ function Viewdata(){
         <td> ".$row['email']."</td>
         <td> ".$row['age']."</td>
         <td> ".$row['useraddress']."</td>
+        <td> ".$row['subjectname']."</td>
+        <td> ".$row['countryname']."</td>
+        <td> ".$row['gender']."</td>
         
       </tr>  ";
     }
